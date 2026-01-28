@@ -1,37 +1,208 @@
-*{
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, sans-serif;
 }
 
-body{
-  background: radial-gradient(#382664, #120B25  );
-
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #2a1458, #0b061a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }
 
-.container{
+/* Layout */
+.app-container {
   width: 100%;
-  height: 100vh;
+  max-width: 480px;
+  padding: 20px;
+}
+
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
+  backdrop-filter: blur(16px);
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.header h2 {
+  font-size: 18px;
+}
+
+/* Buttons */
+.btn {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.25s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(142, 91, 255, 0.45);
+}
+
+.connect-btn {
+  background: linear-gradient(135deg, #7f5cff, #b96bff);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Wallet Status */
+.wallet-status {
+  font-size: 13px;
+  color: #cfc3ff;
+  margin-bottom: 18px;
+}
+
+.wallet-status span {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Balance Card */
+.balance-card {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  background: rgba(127, 92, 255, 0.15);
+  padding: 16px;
+  border-radius: 16px;
+  margin-bottom: 18px;
+}
+
+.token-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffd36a, #ffb703);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-
+  font-weight: 800;
+  color: #3a2500;
 }
 
-.card{
-  background-color: #3d2f5521;
-  max-width: 450px;
-  height: 100%;
-  width: 100%;
-  border: 2px solid #3D2F55;
-  border-radius: 20px;
-  box-shadow: 0px 0px 20px 0px #000000b8;
+.label {
+  color: #d6ccff;
+  font-size: 14px;
+}
+
+.sub-text {
+  font-size: 12px;
+  color: #b4a7ff;
+}
+
+/* Tabs */
+.tabs {
   display: flex;
-  flex-direction: column;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 18px;
 }
-.tokenname{
-  color: white;
-  justify-self: center;
-  text-align: left;
+
+.tab {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 12px;
+  color: #cfc3ff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: linear-gradient(135deg, #7f5cff, #b96bff);
+  color: #fff;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 20px;
+}
+
+.section h3 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+/* Inputs */
+label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #d6ccff;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+input::placeholder {
+  color: #b6aaff;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.max-btn {
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  border-radius: 12px;
+  padding: 0 14px;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Actions */
+.send-btn,
+.check-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #7f5cff, #b96bff);
+}
+
+.available {
+  font-size: 12px;
+  color: #bcb1ff;
+  margin-bottom: 14px;
+}
+
+/* Status */
+.status {
+  text-align: center;
+  font-size: 13px;
+}
+
+.status.error {
+  color: #ff7a7a;
 }
